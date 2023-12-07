@@ -7,7 +7,7 @@
   <div class="min-h-screen flex flex-col relative ">
     <div class="bg-teal-800/40    flex-grow">
     </div>
-    <div class="bg-teal-300/20  flex-grow ">
+    <div class="bg-blue-950  flex-grow ">
     </div>
     <div class="absolute  w-full h-full flex-col flex items-end justify-center space-y-10 ">
       <div class="   flex items-center justify-center space-x-4">
@@ -15,9 +15,9 @@
          Software Developer
         </div>
         <div v-motion-slide-top :delay="2500" class="  w-1/2 flex items-center justify-center">
-          <img
+          <!-- <img
             src="https://tung.devfoliov2.devopportunities.dev/TungPortrait.jpg"
-            alt="" class="shadow-xl aspect-[16/22] w-2/5 object-cover">
+            alt="" class="shadow-xl aspect-[16/22] w-2/5 object-cover"> -->
         </div>
       </div>
       <div class="flex w-full  justify-between">

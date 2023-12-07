@@ -4,12 +4,14 @@
 </script>
 
 <template>
-  <div class="flex flex-col  ">
+  <div class="flex flex-col   bg-gray-950 text-white ">
     <div id="hero-section">
       <Hero />
     </div>
   
-
+   <div id="about-section">
+      <About />
+    </div>
 
   <Gallery/>
     <!-- <div id="about-section">

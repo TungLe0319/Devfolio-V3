@@ -1,16 +1,25 @@
 <template>
 
     <div class=" flex flex-col items-center justify-center">
+       <v-chip
+        class="ma-2"
+        color="primary"
+        variant="outlined"
+        size="x-large"
+      >
+      <v-icon start icon="mdi-account-outline"></v-icon>
+      About
+      </v-chip>
         <div v-motion-slide-visible-top class=" text-5xl text-center  font-bold my-10">
-        About us
+        About 
         </div>
         <hr v-motion-slide-visible-bottom class="  w-1/6  h-2 border-orange-400">
     </div>
 
-   <div class="flex w-full flex-col items-center justify-center  p-10 lg:flex-row ">
+   <div class=" flex w-full flex-col items-center justify-center  p-10 lg:flex-row ">
       <div class="flex flex-col items-center justify-center lg:w-1/2 lg:pl-10">
-          <SectionHeader header="Your Comfort, Our Mission" title="Efficient Heating and Cooling Answers"
-            content="Facing issues with inconsistent room temperatures? Our HVAC experts provide tailored solutions to ensure a comfortable environment in every corner of your home. Say goodbye to temperature imbalances and hello to personalized climate control." />
+          <SectionHeader header="Hi There!" title="Digital Doodler" content="I'm a software developer based in the Bay Area, California. I have a passion for creating software that is both intuitive and efficient. I am currently a student at San Jose State University, pursuing a B.S. in Computer Science. I am also a self-taught artist and enjoy creating digital art in my free time." />
+         
           <div class="mt-3 space-y-8">
             <div v-motion-slide-visible-left  class="flex">
               <div class="mx-3 h-fit">
@@ -66,10 +75,9 @@
           </div>
         </div>
       <div v-motion-slide-visible-right class="flex flex-col w-full items-center justify-center lg:w-1/2 mb-10 lg:mb-0">
-        <iframe class="rounded-md shadow-2xl aspect-video" width="560" height="400"
-          src="https://www.youtube.com/embed/NpEaa2P7qZI?si=AYGfNW0zFeyJNnVg" title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen />
+       <img
+              src="https://tung.devfoliov2.devopportunities.dev/TungPortrait.jpg"
+              alt="" class="shadow-xl aspect-[16/22] w-2/5 object-cover">
 
          <div class="my-10 text-center">
           <div class=" my-5">Follow us on other social media.</div>
