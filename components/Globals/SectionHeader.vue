@@ -1,17 +1,11 @@
 <script lang="ts" setup>
-defineProps(['header', 'title', 'content'])
+defineProps(['header'])
 </script>
 
 <template>
-  <div class="mb-4 flex flex-col items-center justify-center space-y-6">
-    <h3 v-motion-slide-visible-left   class="text-start w-full uppercase text-orange-400">
+  <div v-motion-slide-visible-left class=" bg-orange-500   w-fit flex items-center justify-center space-x-4">
+    <div class="text-8xl  abril-fatface   px-2  ml-5 ">
       {{ header }}
-    </h3>
-    <h1 v-motion-slide-visible-left class=" text-xl font-bold lg:text-5xl">
-      {{ title }}
-    </h1>
-    <div v-motion-slide-visible-left class="  text-lg font-medium">
-      <p>{{ content }}</p>
     </div>
   </div>
 </template>

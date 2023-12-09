@@ -1,6 +1,10 @@
 <template>
-<div class="min-h-screen bg-teal-950  flex flex-wrap ">
-  <div class="   md:w-1/2 lg:w-1/3" v-for="(p,index) in projects">
+     <div v-motion-slide-visible-bottom class=" bg-orange-500 text-9xl oswald font-bold  ">
+      Projects
+    </div>
+<div class=" relative  flex  flex-wrap p-10 ">
+ 
+  <div class=" w-1/3  3xl:w-1/4  " v-for="(p,index) in projects">
      <Parallax
   :title="p.title"
   :src="p.src"
@@ -12,6 +16,8 @@
 
      />
   </div>
+
+
 </div>
 </template>
 

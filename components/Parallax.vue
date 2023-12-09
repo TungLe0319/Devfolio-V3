@@ -19,7 +19,7 @@ const layer0 = computed(() => ({
 }));
 
 const containerStyle = {
-  margin: '3em auto',
+  margin: '1em auto',
   perspective: '1000px',
 
 };
@@ -50,9 +50,18 @@ const link = 'https://example.com'; // Replace with your actual link
 
 
 
+const showingInfo = ref(false);
+const toggleInfo = () => {
+  showingInfo.value = !showingInfo.value;
+};
 
+const showInfo = () => {
+  showingInfo.value = true;
+};
 
-
+const hideInfo = () => {
+  showingInfo.value = false;
+};
 
 const startAnimation = () => {
   showOverlay.value = true;
@@ -65,62 +74,61 @@ const startAnimation = () => {
 </script>
 
 <template>
- 
-    <div ref="target" class="flex flex-col justify-center min-h-[500px] transition-all duration-300 ease-out   ">
-      <div :style="containerStyle"
-        class=" group">
-        <div v-motion-slide-visible-top :delay="200"  :style="cardStyle" class="">
-            <button  @click="startAnimation" target="_blank" class="">
-            <img  :style="layer0" :src="src" alt=""
-              class="   rounded-md
+  <div ref="target" class="flex flex-col justify-center min-h-[500px] transition-all duration-300 ease-out relative   ">
+    
+        <div  class="backdrop-blur-xl bg-gray-950/40 rounded-md w-2/3 h-1/2 p-10 left-1/2    -translate-x-1/2 z-50 absolute transition-all duration-200 origin-center" :class="showingInfo ?  'scale-100':'scale-0' ">
+          {{ description }}
+        </div>
+     
+    <div :style="containerStyle" class=" group flex  justify-center space-x-44 w-full">
+      <div v-motion-slide-visible-top :delay="200" :style="cardStyle">
+        <button @click="startAnimation" target="_blank" class="">
+          <img :style="layer0" :src="src" alt="" class="   rounded-md
                object-cover hover:shadow-2xl hover:shadow-gray-800  brightness-75     " />
-            <div v-motion-slide-visible-left :delay="600"
-              class="text-white font-bold text-3xl absolute top-1/2 -left-1/3    w-1/2   ">
-              <div class=" oswald  text-2xl ">
-                {{ title }}
+          <div v-motion-slide-visible-left :delay="600"
+            class="text-white font-bold text-3xl absolute top-1/2 -left-1/3    w-1/2   ">
+            <div class=" oswald  text-2xl ">
+              {{ title }}
+            </div>
+            <hr class="border-2 my-4" />
+            <div class="flex space-x-4">
+              <div class=" bg-red-900">
               </div>
-              <hr class="border-2 my-4" />
-              <div class="flex space-x-4">
-               <div class=" bg-red-900">
-
-               </div>
-                   <div class="text-gray-500">
-                  0{{ index + 1 }}
-                </div>
+              <div class="text-gray-500">
+                0{{ index + 1 }}
               </div>
-            
-              <div class=" text-gray-500 group-hover:text-teal-300 group-hover:translate-x-12 transition-all duration-200">
+            </div>
+            <div class=" flex space-x-2 ">
+            <div @click="toggleInfo" @mouseover="showInfo" @mouseleave="hideInfo"
+       class="z-50 group/info rounded-full bg-white flex items-center justify-center w-8 h-8">
+      <Icon name="uil:info" class="text-black text-3xl" />
+  </div>
+              <div
+                class="text-gray-500 group-hover:text-teal-300  group-hover:translate-x-12 transition-all duration-200">
                 <Icon name="material-symbols:arrow-right-alt-rounded" />
               </div>
             </div>
-
-
-            <div v-motion-slide-visible-right :delay="600" class="absolute   -right-28 text-white flex flex-col h-full">
-            <div v-for="t in tech">
-            <!-- <img :src="t.src" alt="" class="w-10 my-2"> -->
-
-            <v-tooltip :text="t.title"  content-class="bg-info">
-      <template v-slot:activator="{ props }">
-     
-          <img v-bind="props" :src="t.src" alt="" class="w-10 my-2 shadow-none ">
-      </template>
-    </v-tooltip>
-            </div>
-            </div>
-
-             <div  v-if="showOverlay" class="overlay"></div>
-
-            
-          </button>
           </div>
+          <div v-motion-slide-visible-right :delay="600" class="absolute   -right-28 text-white flex flex-col h-full">
+            <div v-for="t in tech">
+              <!-- <img :src="t.src" alt="" class="w-10 my-2"> -->
+              <v-tooltip :text="t.title" content-class="bg-info">
+                <template v-slot:activator="{ props }">
+                  <img v-bind="props" :src="t.src" alt="" class="w-10 my-2 shadow-none ">
+                </template>
+              </v-tooltip>
+            </div>
+          </div>
+          <!-- <div v-motion-roll-left  v-if="showOverlay"  class=" w-full h-full bg-white  z-50 absolute"></div> -->
+        </button>
       </div>
     </div>
-
+  </div>
 </template>
 
 <style scoped>
 .overlay {
-  position: absolute;
+
   top: 0;
   left: 1000px;
   width: 100%;
@@ -134,11 +142,27 @@ const startAnimation = () => {
 
 .custom-tooltip {
   height: 100px;
-  width: 200px; /* Adjust the width as needed */
+  width: 200px;
+  /* Adjust the width as needed */
   background-color: white;
   color: black;
-  padding: 10px; /* Add padding as needed */
-  border: 1px solid #ccc; /* Add border as needed */
-  border-radius: 8px; /* Add border-radius as needed */
+  padding: 10px;
+  /* Add padding as needed */
+  border: 1px solid #ccc;
+  /* Add border as needed */
+  border-radius: 8px;
+  /* Add border-radius as needed */
+}
+
+
+
+
+.slide-fade-enter-active, .slide-fade-leave-active {
+  transition: opacity 0.5s, transform 0.5s;
+}
+ .slide-fade-leave-to,
+ .slide-fade-leave {
+  opacity: 0;
+  transform: translateY(-20px);
 }
 </style>

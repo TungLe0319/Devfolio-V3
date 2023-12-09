@@ -4,7 +4,7 @@
 </script>
 
 <template>
-  <div class="flex flex-col   bg-gray-950 text-white ">
+  <div class="flex flex-col   bg-zinc-950 text-white ">
     <div id="hero-section">
       <Hero />
     </div>
@@ -13,6 +13,7 @@
       <About />
     </div>
 
+    <Experience/>
   <Gallery/>
     <!-- <div id="about-section">
       <About />
