@@ -14,7 +14,7 @@
     duration: 1000,
     delay: 100,
   },
-}" class="   space-y-10  p-10 w-1/2">
+}" class="   space-y-10  p-10 w-1/2 sticky top-12 h-full">
       <h3 class="text-5xl font-bold">A small intro...</h3>
       <p>I am an independent full-stack developer based in Idaho, USA.</p>
       <p>I specialize in frontend development and UI/UX design. 😎</p>

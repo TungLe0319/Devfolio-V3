@@ -4,7 +4,7 @@ import { ref, onMounted, onUnmounted } from 'vue';
 const aboutSection = ref(null);
 const introSection = ref(null);
 const heroSection = ref(null);
-const pageRef = ref(null);
+const servicesSection = ref(null);
 const projectsSection = ref(null);
 const sectionBlack = ref(false);
 const contactSection = ref(null);
@@ -47,6 +47,7 @@ onMounted(() => {
   isInView(heroSection);
   isInView(projectsSection);
   isInView(contactSection);
+  isInView(servicesSection);
 
 });
 
@@ -77,6 +78,11 @@ onMounted(() => {
     </section>
     <div ref="aboutSection" id="about">
       <About />
+    </div>
+
+
+    <div  ref="servicesSection" id="services">
+      <Services/>
     </div>
     <div ref="projectsSection" id="projects">
       <Projects />

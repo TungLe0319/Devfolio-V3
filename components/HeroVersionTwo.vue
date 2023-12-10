@@ -1,22 +1,9 @@
 <template>
   <div class="min-h-screen flex items-center justify-center relative">
-    <!-- <img v-motion :initial="{
-  
-    }" :enter="{
-
-  transition: {
-    duration: 2000,
-    delay: 500,
-  },
-}" src="https://images.unsplash.com/flagged/photo-1572392640988-ba48d1a74457?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      alt="" class="  rounded-md shadow-xl object-cover w-full  max-h-screen"> -->
-
 
 
     <div class="absolute w-full h-full flex items-center justify-center ">
-      <!-- <h1  class="text-[10rem]   font-bold text-black">Hello 👋 I'm <span
-          class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
-          T</span>ung</h1> -->
+   
       <h1 v-motion :initial="{
         y: 100,
         opacity: 0
@@ -32,7 +19,7 @@
       </h1>
     </div>
     <div class="absolute w-full h-full flex items-center justify-center">
-    👋
+    
       <h1 v-motion :initial="{
         y: 200,
         opacity: 0
@@ -43,7 +30,7 @@
     duration: 1000,
     delay: 2000,
   },
-}" class="text-background-clip text-[32rem] font-bold drop-shadow-lg">
+}" class="text-background-clip text-[32rem] font-bold drop-shadow-lg ml-4">
          Tung
       </h1>
     </div>

@@ -13,7 +13,6 @@
   cursor: none;
 }
 
-
 *::selection {
   background-color: #d1d1c7;
   color: #fff; /* Text color when highlighted */
@@ -32,10 +31,14 @@
   font-family: "Noto Sans Display", sans-serif;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Roboto", sans-serif;
 }
-
 
 html.lenis {
   height: auto;
@@ -61,21 +64,16 @@ img {
   @apply hover:brightness-90 transition-all duration-150 ease-linear shadow-md;
 }
 
-
-
-
-
 body {
   --sb-track-color: #383838;
   --sb-thumb-color: #afab94;
   --sb-size: 10px;
 
-  scrollbar-color: var(--sb-thumb-color) 
-                   var(--sb-track-color);
+  scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
 }
 
 body::-webkit-scrollbar {
-  width: var(--sb-size) 
+  width: var(--sb-size);
 }
 
 body::-webkit-scrollbar-track {
@@ -86,5 +84,4 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background: var(--sb-thumb-color);
   border-radius: 20px;
-  
-  }
+}

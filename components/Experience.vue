@@ -1,8 +1,21 @@
 <template>
 
- <div class="p-20">
+ <div v-motion :initial="{
+   opacity: 0,
+   y: 100,
+ }" :visible="{
+  opacity: 1,
+  y: 0,
+  transition: {
+    duration: 1000,
+    delay: 100,
+  },
+}" class="p-20">
      <v-timeline align="start">
         <v-timeline-item
+
+
+        
           v-for="(exp, i) in experience"
           :key="i"
           :dot-color="exp.color"
