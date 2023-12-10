@@ -1,7 +1,7 @@
 <template>
   <ul class="col-span-2 flex flex-col justify-start gap-6 lg:col-span-5 lg:justify-end">
     <li v-for="item in items" >
-     <a :href="item.link" class="flex items-center  space-x-4">
+     <a @mouseenter="handleCursor"  @mouseleave="resetCursor" :href="item.link" class="flex items-center  space-x-4">
        <Icon :name="item.icon" class="text-3xl   transition-all duration-200" />
        <h6 class="font-bold"> {{ item.name }} </h6>
      </a>
@@ -11,6 +11,8 @@
 </template>
 
 <script lang="ts" setup>
+import { handleCursor, resetCursor } from '~/appState';
+
 //generate a list of social media icons with link, name, and icon 
 const items = 
 [

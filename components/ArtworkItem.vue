@@ -85,7 +85,7 @@ const startAnimation = () => {
 }" :style="cardStyle" class=" w-72 h-full ">
         <button @click="startAnimation" target="_blank" class="">
           <img :style="layer0" :src="src" alt="" class="   rounded-md
-               object-cover shadow-none  brightness-75     " />
+               object-cover shadow-none     " />
         </button>
       </div>
     </div>

@@ -2,7 +2,7 @@
   <SectionHeader header="< Projects />" />
   <div class=" relative  flex  flex-wrap p-10 ">
     <div class=" w-1/3  3xl:w-1/4  " v-for="(p, index) in projects">
-      <Parallax :title="p.title" :src="p.src" :description="p.description" :date="p.date" :tech="p.tech" :link="p.link"
+      <ProjectItem :title="p.title" :src="p.src" :description="p.description" :date="p.date" :tech="p.tech" :link="p.link"
         :index="index" />
     </div>
   </div>
