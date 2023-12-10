@@ -102,7 +102,7 @@ onBeforeUnmount(() => {
 const items = [
   
   { title: 'about', href: '#about', icon: 'mdi-book' },
-
+  { title: 'services', href: '#services', icon: 'mdi-food' },
   { title: 'projects', href: '#projects', icon: 'mdi-food' },
   { title: 'contact', href: '#contact', icon: 'mdi-food' },
 
@@ -181,14 +181,11 @@ const threshold = ref(100)
   transition: 0.3s;
 }
 
-.nav-item:not(.active):hover:before {
-  opacity: 1;
-  bottom: 0;
-}
+
 
 .nav-item:hover:before {
   width: 100%;
-  opacity: 0;
+  opacity: 1;
   transition: 0.3s;
 }
 

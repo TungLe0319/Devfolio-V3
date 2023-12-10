@@ -15,7 +15,7 @@ defineProps(['header'])
     delay: 100,
   },
 }" class="    flex items-center justify-center space-x-4 my-24">
-    <h2 class="text-[9rem]   font-bold   px-2  ml-5 ">
+    <h2 class="text-[9rem]  text-[#8c8c73]  font-bold   px-2  ml-5 ">
       {{ header }}
     </h2>
   </div>

@@ -95,10 +95,10 @@ const startAnimation = () => {
         <button @click="startAnimation" target="_blank" class="">
              <div v-motion-slide-visible-left :delay="600"
               class=" font-bold text-3xl  flex   mb-10   w-96 space-x-2  ">
-               <div class="text-gray-500  ">
+               <div class="text-[#8c8c73]  ">
                     0{{ index + 1 }}
                   </div>
-              <h4 class="   text-2xl group-hover:text-teal-300 transition-colors duration-200 ">
+              <h4 class=" text-[#8c8c73]   text-2xl group-hover:text-teal-300 transition-colors duration-200 ">
                &lt; {{ title }}
  />              </h4>
            

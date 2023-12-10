@@ -1,14 +1,48 @@
 <template>
-  <div class="min-h-screen">
+  <div class="min-h-screen pb-24">
     <SectionHeader header="< Contact />" />
-    <div class="flex items-center justify-center px-20">
-      <div class="w-2/3">
-        <h2 class=" text-8xl font-bold ">Have an idea? <br>
+    <div class="flex items-center justify-center ">
+      <div class="w-2/3 p-10">
+        <h2 v-motion :initial="{
+          opacity: 0,
+          y: 100,
+        }" :visible="{
+  opacity: 1,
+  y: 0,
+  transition: {
+
+    duration: 1000,
+    delay: 100,
+  },
+}" class=" text-8xl font-bold p-3 ">Have an idea? <br>
           Let's bring it to life.</h2>
-        <h3 class=" text-4xl  opacity-50">
-          I am currently not available for freelance work. I am accepting new projects starting from February 2022.
+        <h3 v-motion :initial="{
+          opacity: 0,
+          y: 100,
+        }" :visible="{
+  opacity: 1,
+  y: 0,
+  transition: {
+
+    duration: 1000,
+    delay: 100,
+  },
+}" class=" text-3xl text-[#8c8c73]   my-5 p-4">
+          I am currently working a full-time job, but I am always open to new opportunities. If you have any questions, or
+          just want to say hi, feel free to reach out to me.
         </h3>
-        <div class="">
+        <div v-motion :initial="{
+          opacity: 0,
+          y: 100,
+        }" :visible="{
+  opacity: 1,
+  y: 0,
+  transition: {
+
+    duration: 1000,
+    delay: 100,
+  },
+}" class="">
           <v-form @submit.prevent="sendEmail">
             <v-container>
               <v-row class="mb-4">
@@ -28,21 +62,33 @@
               <v-textarea v-model="content" :rules="contentRule" clearable label="Your message"
                 color="orange-lighten-2"></v-textarea>
               <div class=" w-fit">
-                <v-btn type="submit" variant="outlined" block color="orange-lighten-2" class="mt-2  ">Send a
+                <v-btn type="submit" variant="outlined" block  class="mt-2 !text-[#8c8c73]  ">Send a
                   message</v-btn>
               </div>
             </v-container>
           </v-form>
         </div>
       </div>
-      <div class="w-1/3">
-        <div class="">Contact Details</div>
-        <div class="">Email: <a href="mailto:
-
-        ">@gmail.com</a></div>
+      <div v-motion :initial="{
+        opacity: 0,
+        y: 100,
+      }" :visible="{
+  opacity: 1,
+  y: 0,
+  transition: {
+    duration: 1000,
+    delay: 100,
+  },
+}" class="w-1/3 flex flex-col   items-start">
+        <h3 class=" font-bold text-4xl mb-5">Contact & Socials</h3>
+     
         <div class="">
-          <div class="">Socials</div>
+      
           <SocialIconList />
+        </div>
+        <div class="">
+          <h3 class=" font-bold text-4xl my-5">Location</h3>
+          Idaho, United States
         </div>
       </div>
     </div>

@@ -1,8 +1,9 @@
 <template>
-  <ul class="col-span-2 flex justify-start gap-6 lg:col-span-5 lg:justify-end">
-    <li v-for="item in items">
-     <a :href="item.link">
+  <ul class="col-span-2 flex flex-col justify-start gap-6 lg:col-span-5 lg:justify-end">
+    <li v-for="item in items" >
+     <a :href="item.link" class="flex items-center  space-x-4">
        <Icon :name="item.icon" class="text-3xl   transition-all duration-200" />
+       <h6 class="font-bold"> {{ item.name }} </h6>
      </a>
     </li>
   
@@ -15,12 +16,12 @@ const items =
 [
   {
     name: "Github",
-    link: "",
+    link: "https://github.com/TungLe0319",
     icon: "akar-icons:github-fill"
   },
   {
     name: "Linkedin",
-    link: ""
+    link: "https://www.linkedin.com/in/tung-le0319/"
     , icon: "akar-icons:linkedin-fill"
   },
   {
@@ -30,14 +31,17 @@ const items =
   },
   {
     name: "Instagram",
-    link: "",
+    link: "https://www.instagram.com/tungusthefungus/?next=%2F",
     icon: "akar-icons:instagram-fill"
   },
   {
-    name: "Facebook",
-    link: "",
-    icon: "ic:baseline-facebook"
+    name: "Email",
+    link: "mailto:tung.le0319@gmail.com",
+    icon: "akar-icons:envelope"
   },
+ 
+
+ 
 ]
 </script>
 

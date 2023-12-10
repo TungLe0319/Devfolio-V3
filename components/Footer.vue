@@ -43,31 +43,7 @@ const scrollToTop = () => {
       </div>
       <div class="flex flex-col">
     
-       <div v-motion :initial="{
-         opacity: 0,
-         y: 100,
-       }" :visible="{
-  opacity: 1,
-  y: 0,
-  transition: {
-
-    duration: 1000,
-    delay: 100,
-  },
-}"  class="flex flex-row  items-center space-x-2">
-              <a href="/">
-                <Icon name="uil:facebook" class="text-4xl" />
-              </a>
-              <a href="/">
-                <Icon name="uil:instagram" class="text-4xl" />
-              </a>
-              <a href="/">
-                <Icon name="uil:youtube" class="text-4xl" />
-              </a>
-              <a href="/">
-                <Icon name="fa6-brands:x-twitter" class="text-4xl" />
-              </a>
-            </div>
+   
         <div v-motion :initial="{
           opacity: 0,
           y: 100,

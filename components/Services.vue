@@ -5,7 +5,7 @@
 
 
 
-  <div class="flex  ">
+  <div class="flex   ">
     <div v-motion :initial="{
       opacity: 0,
       y: 100,
@@ -16,16 +16,16 @@
     duration: 1000,
     delay: 100,
   },
-}" class="lg:w-1/2 p-10  sticky top-24 h-full">
+}" class="lg:w-1/3 p-10  sticky top-24 h-full w-full">
   <h3 class="font-bold text-5xl mb-4">
     my experience.
   </h3>
-  <p class="w-1/2 text-lg">
+  <p class=" text-lg">
     These are my go to tech stack to make any projects happen. I am always eager of learning more about my current stack, and new technologies that could expand my horizons.
   </p>
 
     </div>
-    <div class="lg:w-1/2 grid grid-cols-7 gap-4">
+    <div class="lg:w-2/3 p-3  ">
 
  <Experience/>
     </div>
@@ -52,18 +52,18 @@
     duration: 1000,
     delay: 100,
   },
-}" class="lg:w-1/2 p-10  sticky top-24 h-full">
+}" class="lg:w-1/3 p-10  sticky top-24 h-full">
 <h3 class="font-bold text-5xl mb-4">
   my digital tool box.
 </h3>
-<p class="w-1/2 text-lg">
+<p class=" text-lg">
   These are my go to tech stack to make any projects happen. I am always eager of learning more about my current stack, and new technologies that could expand my horizons.
 </p>
 
   </div>
-  <div class="lg:w-1/2 grid grid-cols-7 gap-4">
+  <div class="lg:w-2/3 grid grid-cols-7 gap-4 my-10">
 
-    <div v-for="skill in skills">
+    <div v-for="skill in skills" class="w-24 h-24">
     <v-tooltip :text="skill.title">
       <template v-slot:activator="{ props }">
     <img v-bind="props" v-motion :initial="{

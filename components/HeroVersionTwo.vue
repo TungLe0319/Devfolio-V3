@@ -2,8 +2,23 @@
   <div class="min-h-screen flex items-center justify-center relative">
 
 
-    <div class="absolute w-full h-full flex items-center justify-center ">
+    <p v-motion :initial="{
+      y: 100,
+      opacity: 0
+    }" :enter="{
+  y: 0,
+  opacity: 1,
+  transition: {
+    duration: 1000,
+    delay: 1500,
+  },
+}" class="absolute top-96 font-bold text-4xl noto-sans">Hello 👋🏼, My name is</p>
+
+    <div class="absolute w-full h-full flex flex-col items-center justify-center ">
    
+
+
+
       <h1 v-motion :initial="{
         y: 100,
         opacity: 0
@@ -18,8 +33,8 @@
         Tung
       </h1>
     </div>
-    <div class="absolute w-full h-full flex items-center justify-center">
-    
+    <div class="absolute w-full h-full flex flex-col items-center justify-center">
+
       <h1 v-motion :initial="{
         y: 200,
         opacity: 0
