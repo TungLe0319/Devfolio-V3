@@ -5,6 +5,9 @@
 
 <template>
   <div class="min-h-screen flex flex-col relative ">
+
+
+
     <div class="bg-zinc-800/40    flex-grow">
     </div>
     <div class="bg-zinc-950  flex-grow ">

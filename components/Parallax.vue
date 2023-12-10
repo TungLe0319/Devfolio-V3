@@ -76,50 +76,62 @@ const startAnimation = () => {
 <template>
   <div ref="target" class="flex flex-col justify-center min-h-[500px] transition-all duration-300 ease-out relative   ">
     
-        <div  class="backdrop-blur-xl bg-gray-950/40 rounded-md w-2/3 h-1/2 p-10 left-1/2    -translate-x-1/2 z-50 absolute transition-all duration-200 origin-center" :class="showingInfo ?  'scale-100':'scale-0' ">
+        <div  class="backdrop-blur-xl bg-gray-950/40 rounded-md w-2/3 h-1/2 p-10 left-1/2  bottom-0   text-white noto-sans -translate-x-1/2 z-50 absolute transition-all duration-500 origin-center" :class="showingInfo ?  'scale-100':'scale-0' ">
           {{ description }}
         </div>
      
     <div :style="containerStyle" class=" group flex  justify-center space-x-44 w-full">
-      <div v-motion-slide-visible-top :delay="200" :style="cardStyle">
+      <div v-motion :initial="{
+        opacity: 0,
+        y: 100,
+      }" :visible="{
+  opacity: 1,
+  y: 0,
+  transition: {
+    duration: 300,
+    delay: 100,
+  },
+}" :style="cardStyle">
         <button @click="startAnimation" target="_blank" class="">
+             <div v-motion-slide-visible-left :delay="600"
+              class=" font-bold text-3xl  flex   mb-10   w-96 space-x-2  ">
+               <div class="text-gray-500  ">
+                    0{{ index + 1 }}
+                  </div>
+              <h4 class="   text-2xl group-hover:text-teal-300 transition-colors duration-200 ">
+               &lt; {{ title }}
+ />              </h4>
+           
+              <div class="flex space-x-4">
+                <div class=" bg-red-900">
+                </div>
+               
+              </div>
+              <div class=" flex space-x-2 ">
+              <div @click="toggleInfo" @mouseover="showInfo" @mouseleave="hideInfo"
+         class="z-50 group/info rounded-full bg-white flex items-center justify-center w-8 h-8">
+        <Icon name="uil:info" class="text-black text-3xl" />
+    </div>
+                <div
+                  class="text-gray-500 group-hover:text-teal-300  group-hover:translate-x-12 transition-all duration-200">
+                  <Icon name="material-symbols:arrow-right-alt-rounded" />
+                </div>
+              </div>
+            </div>
           <img :style="layer0" :src="src" alt="" class="   rounded-md
                object-cover hover:shadow-2xl hover:shadow-gray-800  brightness-75     " />
-          <div v-motion-slide-visible-left :delay="600"
-            class="text-white font-bold text-3xl absolute top-1/2 -left-1/3    w-1/2   ">
-            <div class=" oswald  text-2xl ">
-              {{ title }}
-            </div>
-            <hr class="border-2 my-4" />
-            <div class="flex space-x-4">
-              <div class=" bg-red-900">
-              </div>
-              <div class="text-gray-500">
-                0{{ index + 1 }}
-              </div>
-            </div>
-            <div class=" flex space-x-2 ">
-            <div @click="toggleInfo" @mouseover="showInfo" @mouseleave="hideInfo"
-       class="z-50 group/info rounded-full bg-white flex items-center justify-center w-8 h-8">
-      <Icon name="uil:info" class="text-black text-3xl" />
-  </div>
-              <div
-                class="text-gray-500 group-hover:text-teal-300  group-hover:translate-x-12 transition-all duration-200">
-                <Icon name="material-symbols:arrow-right-alt-rounded" />
-              </div>
-            </div>
-          </div>
-          <div v-motion-slide-visible-right :delay="600" class="absolute   -right-28 text-white flex flex-col h-full">
+       
+          <div v-motion-slide-visible-right :delay="600" class="absolute     -bottom-[19rem]  text-white flex  h-full">
             <div v-for="t in tech">
               <!-- <img :src="t.src" alt="" class="w-10 my-2"> -->
-              <v-tooltip :text="t.title" content-class="bg-info">
+              <v-tooltip :text="t.title" >
                 <template v-slot:activator="{ props }">
                   <img v-bind="props" :src="t.src" alt="" class="w-10 my-2 shadow-none ">
                 </template>
               </v-tooltip>
             </div>
           </div>
-          <!-- <div v-motion-roll-left  v-if="showOverlay"  class=" w-full h-full bg-white  z-50 absolute"></div> -->
+      
         </button>
       </div>
     </div>

@@ -1,14 +1,14 @@
 <template>
   <div>
     <v-layout class="flex flex-col">
-      <div class="" v-if="!showAnimation">
+  
         <NavBar />
-      </div>
+   
       <slot />
-      <Footer />
+    <Footer/>
     </v-layout>
-    <VuePreloader background-color="#000" color="#ffffff" transition-type="fade-down" :loading-speed="10"
-      :transition-speed="1800" @loading-is-over="showAnimation = false" @transition-is-over="transitionIsOver = true">
+    <!-- <VuePreloader background-color="#000" color="#ffffff" transition-type="fade-down" :loading-speed="10"
+      :transition-speed="1200" @loading-is-over="showAnimation = false" @transition-is-over="transitionIsOver = true">
       <template v-slot="{ percent, color }">
         <transition name="loading-animation" mode="in-out">
           <div v-if="showAnimation" :style="{ color }" class="w-full flex items-center justify-center flex-col">
@@ -24,7 +24,7 @@
           </div>
         </transition>
       </template>
-    </VuePreloader>
+    </VuePreloader> -->
   </div>
 </template>
 
@@ -35,6 +35,31 @@ import { VuePreloader } from 'vue-preloader';
 import '../node_modules/vue-preloader/dist/style.css'
 const showAnimation = ref(true)
 const transitionIsOver = ref(false)
+
+
+import Lenis from '@studio-freight/lenis'
+
+let smoother
+
+function initLenis() {
+  smoother = new Lenis({
+    duration: 1,
+    smooth: true,
+    smoothTouch: false
+  })
+
+  function raf(time) {
+    smoother.raf(time)
+    requestAnimationFrame(raf)
+  }
+
+  requestAnimationFrame(raf)
+}
+
+
+onMounted(() => {
+  initLenis()
+})
 </script>
 
 <style scoped></style>

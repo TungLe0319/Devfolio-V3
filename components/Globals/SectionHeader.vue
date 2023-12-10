@@ -3,10 +3,21 @@ defineProps(['header'])
 </script>
 
 <template>
-  <div v-motion-slide-visible-left class=" bg-orange-500   w-fit flex items-center justify-center space-x-4">
-    <div class="text-8xl  abril-fatface   px-2  ml-5 ">
+  <div v-motion :initial="{
+    opacity: 0,
+    y: 100,
+  }" :visible="{
+  opacity: 1,
+  y: 0,
+  transition: {
+
+    duration: 1000,
+    delay: 100,
+  },
+}" class="    flex items-center justify-center space-x-4 my-24">
+    <h2 class="text-[9rem]   font-bold   px-2  ml-5 ">
       {{ header }}
-    </div>
+    </h2>
   </div>
 </template>
 

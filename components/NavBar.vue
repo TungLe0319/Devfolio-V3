@@ -100,13 +100,11 @@ onBeforeUnmount(() => {
 
 
 const items = [
-  { title: 'Home', href: '#hero-section', icon: 'mdi-home-city' },
-  { title: 'About', href: '#about-section', icon: 'mdi-book' },
-  { title: 'Gallery', href: '#callToAction-section', icon: 'mdi-apps' },
-  { title: 'Features', href: '#features-section', icon: 'mdi-food' },
-  { title: 'Pricing', href: '#pricing-section', icon: 'mdi-food' },
-  { title: 'Projects', href: '#projects-section', icon: 'mdi-food' },
-   { title: 'Contact', href: '#contact-section', icon: 'mdi-food' },
+  
+  { title: 'about', href: '#about', icon: 'mdi-book' },
+
+  { title: 'projects', href: '#projects', icon: 'mdi-food' },
+  { title: 'contact', href: '#contact', icon: 'mdi-food' },
 
 ]
 
@@ -116,7 +114,7 @@ const threshold = ref(100)
 <template>
   <v-app-bar app scroll-behavior="elevate" :scroll-threshold="threshold"
     class="px-4 font-serif transition-color duration-500 "
-    :class="{ 'bg-white  text-black': Y >= threshold, 'bg-transparent text-white': Y <= threshold }">
+    :class="{ '': Y >= threshold, 'bg-transparent ': Y <= threshold }">
     <template v-slot:prepend>
       <v-menu offset="10">
         <template v-slot:activator="{ props }">
@@ -137,8 +135,11 @@ const threshold = ref(100)
       </v-menu>
     </template>
     <div class="flex space-x-4 items-center justify-center" v-motion-slide-left :delay="2000">
-      <Icon name="logos:teamwork-icon" class="text-5xl  drop-shadow-lg" />
-      <v-toolbar-title>Lorem Ipsum's Construction</v-toolbar-title>
+      <Icon name="ic:outline-barcode" class="text-5xl  drop-shadow-lg" />
+      <v-toolbar-title>
+        <h3 class="font-bold">Tung</h3>
+      </v-toolbar-title>
+      <Icon name="material-symbols-light:code-off-rounded" class="text-5xl  drop-shadow-lg" />
     </div>
     <v-spacer></v-spacer>
     <!-- <ul  class="gap-4 relative hidden lg:flex">
@@ -151,13 +152,12 @@ const threshold = ref(100)
     </ul> -->
     <div>
       <ul class="gap-4 relative hidden lg:flex">
-        <li v-motion-slide-right :delay="2000" v-for="(item, index) in items" :key="index">
-          <button @click="scrollToSection(item.href)"  class="nav-item  !text-base "
+        <li v-motion-slide-right :delay="1000" v-for="(item, index) in items" :key="index">
+          <button @click="scrollToSection(item.href)" class="nav-item  !text-base "
             :class="{ 'active text-orange-300 drop-shadow-sm': isActive(item.href) }">
             {{ item.title }}
           </button>
         </li>
-
       </ul>
     </div>
   </v-app-bar>
@@ -171,12 +171,12 @@ const threshold = ref(100)
 .nav-item:before {
   content: "";
   position: absolute;
-  bottom: -6px;
-  left: 0;
-  width: 100%;
+  bottom: 0;
+
+  width: 0%;
   height: 4px;
-  background-color: rgba(253, 187, 116, 0.432);
-  border-radius: 8px 8px 0 0;
+  background-color: rgb(0, 0, 0);
+
   opacity: 0;
   transition: 0.3s;
 }
@@ -186,7 +186,11 @@ const threshold = ref(100)
   bottom: 0;
 }
 
-
+.nav-item:hover:before {
+  width: 100%;
+  opacity: 0;
+  transition: 0.3s;
+}
 
 
 .nav-indicator {
