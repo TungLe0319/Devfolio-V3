@@ -11,9 +11,9 @@ const scrollToTop = () => {
     <div class="md:w-2/3 w-full px-4  flex flex-col">
       <div class="w-full text-7xl font-bold font-serif">
         <h1 v-motion :initial="{
-    opacity: 0,
-    y: 100,
-  }" :visible="{
+          opacity: 0,
+          y: 100,
+        }" :visible="{
   opacity: 1,
   y: 0,
   transition: {
@@ -21,10 +21,26 @@ const scrollToTop = () => {
     duration: 1000,
     delay: 100,
   },
-}"  class="w-full md:w-2/3">I give you my thanks 🙏🏻</h1>
+}" class="w-full md:w-2/3">I give you my thanks 🙏🏻</h1>
       </div>
-      <div class="flex mt-8 flex-col md:flex-row md:justify-between">
+      <div class=" mt-5">
         <p v-motion :initial="{
+          opacity: 0,
+          y: 100,
+        }" :visible="{
+  opacity: 1,
+  y: 0,
+  transition: {
+
+    duration: 1000,
+    delay: 100,
+  },
+}" class="w-full md:w-2/3 text-gray-500">I appreciate you taking the time to visit this portfolio piece and hope it
+          inspires anyone in anyway. </p>
+
+
+
+  <div v-motion :initial="{
     opacity: 0,
     y: 100,
   }" :visible="{
@@ -35,15 +51,23 @@ const scrollToTop = () => {
     duration: 1000,
     delay: 100,
   },
-}"  class="w-full md:w-2/3 text-gray-500">I appreciate you taking the time to visit this portfolio piece and hope it inspires anyone in anyway. </p>
+}" >
+  This portfolio was heavily inspired by 
+  <a href="https://www.huyng.xyz/" target="_blank">Huy Nguyen.</a>
+  </div>
+
+
+
+
+
+
+
+
         <div v-motion-slide-visible-right :delay="200" class=" pt-6 md:pt-0 space-x-4">
-        
           <v-btn @click="scrollToTop" class="orange-lighten-3" icon=" mdi-arrow-up" size="large"></v-btn>
         </div>
       </div>
       <div class="flex flex-col">
-    
-   
         <div v-motion :initial="{
           opacity: 0,
           y: 100,
@@ -55,8 +79,42 @@ const scrollToTop = () => {
     duration: 1000,
     delay: 100,
   },
-}"  class="w-full text-center my-12 text-gray-600">© 2023 <span class="font-bold text-xl">Tung Le</span>
-        <div class="">Site developed and designed with ❤️(∩ ⌣̀_⌣́)🔥 </div></div>
+}" class="w-full text-center my-12 text-gray-600">© 2023 Tung Le
+          <div class=""><p>Site developed and designed with ❤️(∩ ⌣̀_⌣́)🔥</p> 
+
+
+
+          </div>
+          <div class="">
+            checkout my other devfolios:  
+
+          </div>
+          <div class="flex space-x-4 justify-center">
+             <a href="https://www.huyng.xyz/" target="_blank">Version 2</a>
+        <a href="https://www.huyng.xyz/" target="_blank">Version 1</a>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
       </div>
     </div>
   </div>
