@@ -2,7 +2,25 @@
   <div class="min-h-screen flex items-center justify-center relative">
 
 
-    <p v-motion :initial="{
+    <!-- <p v-motion :initial="{
+      y: 100,
+      opacity: 0
+    }" :enter="{
+  y: 0,
+  opacity: 1,
+  transition: {
+    duration: 1000,
+    delay: 1500,
+  },
+}" class="absolute lg:top-44 font-bold text-4xl noto-sans">Hello 👋🏼, My name is</p> -->
+
+    <div class="absolute w-full h-full flex flex-col items-center justify-center ">
+   
+
+
+
+   <div class="">
+       <p v-motion :initial="{
       y: 100,
       opacity: 0
     }" :enter="{
@@ -13,25 +31,20 @@
     delay: 1500,
   },
 }" class="absolute lg:top-44 font-bold text-4xl noto-sans">Hello 👋🏼, My name is</p>
-
-    <div class="absolute w-full h-full flex flex-col items-center justify-center ">
-   
-
-
-
-      <h1 v-motion :initial="{
-        y: 100,
-        opacity: 0
-      }" :enter="{
+       <h1 v-motion :initial="{
+         y: 200,
+         opacity: 0
+       }" :enter="{
   y: 0,
   opacity: 1,
   transition: {
     duration: 1000,
-    delay: 1500,
+    delay: 2000,
   },
-}" class="text-black text-[32rem] font-bold">
-        Tung
-      </h1>
+}" class="text-black text-[32rem] font-bold text-shadow3d">
+          Tung
+        </h1>
+   </div>
     </div>
     <div class="absolute w-full h-full flex flex-col items-center justify-center">
 
@@ -45,7 +58,7 @@
     duration: 1000,
     delay: 2000,
   },
-}" class="text-background-clip text-[32rem] font-bold drop-shadow-lg ml-4">
+}" class="text-background-clip text-[32rem] font-bold drop-shadow-lg ">
          Tung
       </h1>
     </div>
@@ -57,7 +70,7 @@
   opacity: 1,
   transition: {
     duration: 1000,
-    delay: 2000,
+    delay: 2250,
   },
 }"  class="absolute bottom-0 right-4 flex flex-col items-center justify-center ">
      
@@ -86,41 +99,24 @@
 
 
 
-.scroll-downs {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  
-  width :34px;
-  height: 55px;
+.text-shadow3d{
+ text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
 }
-.mousey {
-  width: 3px;
-  padding: 10px 15px;
-  height: 35px;
-  border: 2px solid #000000;
-  border-radius: 25px;
-  opacity: 0.75;
-  box-sizing: content-box;
-}
-.scroller {
-  width: 3px;
-  height: 10px;
-  border-radius: 25%;
-  background-color: #000000;
-  animation-name: scroll;
-  animation-duration: 2.2s;
-  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
-  animation-iteration-count: infinite;
-}
-@keyframes scroll {
-  0% { opacity: 0; }
-  10% { transform: translateY(0); opacity: 1; }
-  100% { transform: translateY(15px); opacity: 0;}
-}
+
+
+
+
 
 
 
