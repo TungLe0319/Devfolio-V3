@@ -49,7 +49,17 @@
          Tung
       </h1>
     </div>
-    <div class="absolute bottom-0 right-4 flex flex-col items-center justify-center ">
+    <div v-motion :initial="{
+      y: 200,
+      opacity: 0
+    }" :enter="{
+  y: 0,
+  opacity: 1,
+  transition: {
+    duration: 1000,
+    delay: 2000,
+  },
+}"  class="absolute bottom-0 right-4 flex flex-col items-center justify-center ">
      
 
    <iframe src="https://lottie.host/embed/37ce6044-afd3-4561-83ce-80f833add0b8/ChjCkvdbgZ.json"></iframe>
