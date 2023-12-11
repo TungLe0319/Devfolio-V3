@@ -12,7 +12,7 @@
     duration: 1000,
     delay: 1500,
   },
-}" class="absolute top-96 font-bold text-4xl noto-sans">Hello 👋🏼, My name is</p>
+}" class="absolute lg:top-44 font-bold text-4xl noto-sans">Hello 👋🏼, My name is</p>
 
     <div class="absolute w-full h-full flex flex-col items-center justify-center ">
    
@@ -63,7 +63,8 @@
 
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
 .text-background-clip {
   font-weight: bold;
   color: transparent;
@@ -110,4 +111,8 @@
   10% { transform: translateY(0); opacity: 1; }
   100% { transform: translateY(15px); opacity: 0;}
 }
+
+
+
+
 </style>

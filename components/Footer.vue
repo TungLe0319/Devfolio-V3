@@ -37,13 +37,10 @@ const scrollToTop = () => {
   },
 }" class="w-full md:w-2/3 text-gray-500">I appreciate you taking the time to visit this portfolio piece and hope it
           inspires anyone in anyway. </p>
-
-
-
-  <div v-motion :initial="{
-    opacity: 0,
-    y: 100,
-  }" :visible="{
+        <div v-motion :initial="{
+          opacity: 0,
+          y: 100,
+        }" :visible="{
   opacity: 1,
   y: 0,
   transition: {
@@ -51,20 +48,13 @@ const scrollToTop = () => {
     duration: 1000,
     delay: 100,
   },
-}" >
-  This portfolio was heavily inspired by 
-  <a href="https://www.huyng.xyz/" target="_blank">Huy Nguyen.</a>
-  </div>
-
-
-
-
-
-
-
-
-        <div v-motion-slide-visible-right :delay="200" class=" pt-6 md:pt-0 space-x-4">
+}">
+          This portfolio was heavily inspired by
+          <a href="https://www.huyng.xyz/" target="_blank">Huy Nguyen.</a>
+        </div>
+        <div v-motion-slide-visible-right :delay="200" class=" pt-6 md:pt-0 space-x-4 flex items-center  ">
           <v-btn @click="scrollToTop" class="orange-lighten-3" icon=" mdi-arrow-up" size="large"></v-btn>
+          <p>Back to the top</p>
         </div>
       </div>
       <div class="flex flex-col">
@@ -80,41 +70,17 @@ const scrollToTop = () => {
     delay: 100,
   },
 }" class="w-full text-center my-12 text-gray-600">© 2023 Tung Le
-          <div class=""><p>Site developed and designed with ❤️(∩ ⌣̀_⌣́)🔥</p> 
-
-
-
+          <div class="">
+            <p>Site developed and designed with ❤️(∩ ⌣̀_⌣́)🔥</p>
           </div>
           <div class="">
-            checkout my other devfolios:  
-
+            checkout my other devfolios:
           </div>
           <div class="flex space-x-4 justify-center">
-             <a href="https://www.huyng.xyz/" target="_blank">Version 2</a>
-        <a href="https://www.huyng.xyz/" target="_blank">Version 1</a>
+            <a href="https://www.huyng.xyz/" target="_blank">Version 2</a>
+            <a href="https://www.huyng.xyz/" target="_blank">Version 1</a>
           </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
       </div>
     </div>
   </div>

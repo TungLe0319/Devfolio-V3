@@ -11,7 +11,7 @@
   },
 }" class=" w-full  ">
     <v-timeline align="start" side="end">
-      <v-timeline-item v-for="(item, i) in experience" :key="i" :dot-color="'#8c8c73'" elevation="4" height="340px">
+      <v-timeline-item v-for="(item, i) in experience" :key="i" :dot-color="'#8c8c73'" elevation="4" >
         <template v-slot:opposite>
           <div :class="`pt-1 headline font-weight-bold text-[#8c8c73]`" v-text="item.date"></div>
         </template>
@@ -23,7 +23,7 @@
             <p class=" leading-loose"> {{ item.description }} </p>
           </v-card-text>
           <div class="flex flex-wrap  p-2 ">
-            <div v-for="t in item.tech" class=" text-sm  p-0.5 px-3 text-white rounded-md m-0.5 bg-[#8c8c73] ">
+            <div v-for="t in item.tech" class=" text-sm  p-0.5 px-3 text-white rounded-md m-0.5 bg-[#8c8c73] hover:bg-black/80 transition-color duration-300 ">
               {{ t }}
             </div>
           </div>
