@@ -1,7 +1,7 @@
 <script setup >
 import { defineProps, ref, computed, reactive } from 'vue';
 import { useParallax } from '@vueuse/core';
-import { appState, resetCursor, handleCursor } from "~/appState";
+import { appState, resetCursor, handleCursor } from "../appstate/appstate";
 
 const target = ref(null);
 const parallax = reactive(useParallax(target));
@@ -82,8 +82,7 @@ const startAnimation = () => {
     <div
       class="backdrop-blur-xl bg-gray-950/40 rounded-md w-5/6 h-1/2 p-5 left-1/2  bottom-0   text-white noto-sans -translate-x-1/2 z-50 absolute transition-all duration-500 origin-center"
       :class="showingInfo ? 'scale-100' : 'scale-0'">
-
-    <p class="font-semibold underline mb-5">Project Description:</p>
+      <p class="font-semibold underline mb-5">Project Description:</p>
       {{ description }}
     </div>
     <div :style="containerStyle" class=" group flex  justify-center  w-full  ">
@@ -179,4 +178,4 @@ const startAnimation = () => {
   opacity: 0;
   transform: translateY(-20px);
 }
-</style>
+</style>~/appstate/appstate

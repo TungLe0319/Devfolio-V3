@@ -1,7 +1,7 @@
 <script   setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 
-import {appState} from '../appState';
+import { appState } from '../appstate/appstate';
 
 const aboutSection = ref(null);
 const introSection = ref(null);
@@ -98,3 +98,4 @@ onMounted(() => {
 
 
 <style scoped></style>
+../appstate/appstate

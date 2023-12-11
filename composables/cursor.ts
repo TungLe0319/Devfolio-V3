@@ -1,4 +1,4 @@
-import { appState } from "../appState";
+import { appState } from "../appstate/appstate";
 
 export const handleCursor = () => {
   appState.cursorWidth = 90;
