@@ -14,10 +14,10 @@
   },
 }" class="   space-y-10  p-10 w-1/2 sticky top-12 h-full">
         <h3 class="text-5xl font-bold">A small intro...</h3>
-        <p>I am an independent full-stack developer based in Idaho, USA.</p>
-        <p>I specialize in frontend development and UI/UX design. 😎</p>
+        <p>I am an full-stack developer based in Idaho, United States.</p>
+        <p>I specialize in frontend development and UI/UX design.</p>
         <p>When I am not coding or designing, I enjoy doodling on procreate, loving on my animals (2 cats, 1 dog), and
-          playing the occasional tilted games. 📸</p>
+          playing the occasional video games.</p>
         <div class="flex space-x-2">
           <img src="/Coco.png" alt="dog" class="rounded-md w-24 h-24 object-cover">
           <img src="/Goblin.png" alt="dog" class="rounded-md w-24 h-24 object-cover">

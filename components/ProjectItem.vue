@@ -1,7 +1,7 @@
 <script setup >
 import { defineProps, ref, computed, reactive } from 'vue';
 import { useParallax } from '@vueuse/core';
-import { appState, resetCursor, handleCursor } from "../appstate/appstate";
+import { appState} from "../appstate/appstate";
 
 const target = ref(null);
 const parallax = reactive(useParallax(target));
@@ -97,7 +97,7 @@ const startAnimation = () => {
     delay: 100,
   },
 }" :style="cardStyle">
-        <button @click="startAnimation" @mouseenter="handleCursor" @mouseleave="resetCursor" target="_blank" class="">
+        <a :href="link"  @mouseenter="handleCursor" @mouseleave="resetCursor" target="_blank" class=" ">
           <div class=" font-bold text-3xl  flex   mb-10   w-96 space-x-2  ">
             <div class="text-[#8c8c73]  ">
               0{{ index + 1 }}
@@ -131,7 +131,7 @@ const startAnimation = () => {
               </v-tooltip>
             </div>
           </div>
-        </button>
+        </a>
       </div>
     </div>
   </div>

@@ -1,16 +1,15 @@
 <template>
   <ul class="col-span-2 flex flex-col justify-start gap-6 lg:col-span-5 lg:justify-end">
-    <li v-for="item in items">
+    <li v-for="item in items" class="">
       <a @mouseenter="handleCursor" @mouseleave="resetCursor" :href="item.link" class="flex items-center  space-x-4">
-        <Icon :name="item.icon" class="text-3xl   transition-all duration-200" />
-        <h6 class="font-bold"> {{ item.name }} </h6>
+        <Icon :name="item.icon" class="text-3xl text-gray-600   transition-all duration-200" />
+        <h6 class="font-medium text-gray-600"> {{ item.name }} </h6>
       </a>
     </li>
   </ul>
 </template>
 
 <script lang="ts" setup>
-import { handleCursor, resetCursor } from '../appstate/appstate';
 
 //generate a list of social media icons with link, name, and icon 
 const items =
@@ -46,4 +45,37 @@ const items =
   ]
 </script>
 
-<style></style>~/appstate/appstate
+<style scoped>
+a{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition: 0.5s;
+}
+
+a:before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+
+  width: 0%;
+  height: 4px;
+  background-color: rgb(0, 0, 0);
+
+  opacity: 0;
+  transition: 0.5s;
+}
+
+
+
+a:hover:before {
+  width: 100%;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+
+
+</style>

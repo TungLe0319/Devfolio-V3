@@ -14,8 +14,7 @@
     duration: 1000,
     delay: 100,
   },
-}" class=" text-8xl font-bold p-3 ">Have an idea? <br>
-          Let's bring it to life.</h2>
+}" class=" text-8xl font-bold p-3 ">Get in touch.</h2>
         <h3 v-motion :initial="{
           opacity: 0,
           y: 100,

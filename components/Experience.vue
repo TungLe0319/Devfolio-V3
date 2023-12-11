@@ -24,7 +24,7 @@
         <TimeLine />
       </div>
     </section>
-    <section class="flex ">
+    <section class="flex my-20 ">
       <div v-motion :initial="{
         opacity: 0,
         y: 100,
@@ -44,21 +44,21 @@
           stack, and new technologies that could expand my horizons.
         </p>
       </div>
-      <div class="lg:w-2/3 grid grid-cols-7 gap-4 my-10">
-        <div v-for="skill in skills" class="w-24 h-24">
-          <v-tooltip :text="skill.title">
-            <template v-slot:activator="{ props }">
-              <Icon v-bind="props" v-motion :initial="{
-                opacity: 0,
-                y: 100,
-              }" :visible="{
+      <div class="lg:w-2/3 flex flex-wrap gap-2 my-10">
+        <div v-motion :initial="{
+          opacity: 0,
+          y: 100,
+        }" :visible="{
   opacity: 1,
   y: 0,
   transition: {
     duration: 1000,
     delay: 100,
   },
-}" :name="skill.src"  class="w-24 h-24 shadow-none" />
+}"   v-for="skill in skills" class="w-24 h-24 shadow-xl rounded-xl">
+          <v-tooltip :text="skill.title">
+            <template v-slot:activator="{ props }">
+              <Icon v-bind="props" :name="skill.src"  class="w-24 h-24 shadow-none" />
             </template>
           </v-tooltip>
         </div>
@@ -79,7 +79,7 @@
     duration: 1000,
     delay: 100,
   },
-}" class="lg:w-1/3 p-10  sticky top-24 h-full">
+}" class="lg:w-1/3 p-10  ">
           <h3 class="font-bold text-5xl mb-4">
             my current stack.
           </h3>
@@ -88,21 +88,21 @@
             stack, and new technologies that could expand my horizons.
           </p>
         </div>
-        <div class="lg:w-2/3 grid grid-cols-7 gap-4 my-10">
-          <div v-for="stack in currentStack" class="w-24 h-24">
-            <v-tooltip :text="stack.title">
-              <template v-slot:activator="{ props }">
-                <Icon v-bind="props" v-motion :initial="{
-                  opacity: 0,
-                  y: 100,
-                }" :visible="{
+        <div class="lg:w-2/3 flex flex-wrap gap-2  my-10">
+          <div v-motion :initial="{
+            opacity: 0,
+            y: 100,
+          }" :visible="{
   opacity: 1,
   y: 0,
   transition: {
     duration: 1000,
     delay: 100,
   },
-}" :name="stack.src"  class="w-24 h-24 shadow-none" />
+}"  v-for="stack in currentStack" class="w-24 h-24 shadow-xl rounded-xl ">
+            <v-tooltip :text="stack.title">
+              <template v-slot:activator="{ props }">
+                <Icon v-bind="props" :name="stack.src"  class="w-24 h-24 shadow-none" />
               </template>
             </v-tooltip>
           </div>
