@@ -1,15 +1,4 @@
-
-
-import { reactive } from "vue";
-
-export const appState = reactive({
-  sectionIsDark: false,
-  cursorWidth: 10,
-  cursorHeight: 10,
-
-  hoveringLink: false,
-});
-
+import { appState } from "../appState";
 
 export const handleCursor = () => {
   appState.cursorWidth = 90;

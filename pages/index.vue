@@ -1,7 +1,7 @@
 <script   setup>
 import { ref, onMounted, onUnmounted } from 'vue';
-import { appState } from "../appState";
 
+import appState from '../appState';
 
 const aboutSection = ref(null);
 const introSection = ref(null);
