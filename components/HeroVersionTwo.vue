@@ -30,7 +30,7 @@
     duration: 1000,
     delay: 1500,
   },
-}" class="absolute lg:top-44 font-bold text-4xl noto-sans">Hello 👋🏼, My name is</p>
+}" class="absolute lg:top-32 font-bold text-4xl noto-sans">Hello 👋🏼, My name is</p>
        <h1 v-motion :initial="{
          y: 200,
          opacity: 0
