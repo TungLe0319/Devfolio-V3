@@ -6,11 +6,11 @@ import { appState } from '../appstate/appstate';
 const aboutSection = ref(null);
 const introSection = ref(null);
 const heroSection = ref(null);
-const servicesSection = ref(null);
+const experienceSection = ref(null)
 const projectsSection = ref(null);
 
 const contactSection = ref(null);
-const test = ref(null)
+
 const isInView = (targetRef) => {
   const options = {
     root: null,
@@ -21,7 +21,9 @@ const isInView = (targetRef) => {
   const callback = (entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        // console.log(entry.target);
+        // console.log(entry.target.id);
+        appState.activeSection = `#${entry.target.id}`;
+        // console.log(appState.activeSection);
         if (entry.target === projectsSection.value || entry.target === introSection.value) {
 
           appState.sectionIsDark = true;
@@ -52,7 +54,7 @@ onMounted(() => {
   isInView(heroSection);
   isInView(projectsSection);
   isInView(contactSection);
-  isInView(servicesSection);
+  isInView(experienceSection)
 
 });
 
@@ -64,7 +66,7 @@ onMounted(() => {
     <div ref="heroSection">
       <HeroVersionTwo />
     </div>
-    <section ref="introSection" v-motion :initial="{
+    <div ref="introSection" v-motion :initial="{
       opacity: 0,
       y: 100,
     }" :visible="{
@@ -76,20 +78,23 @@ onMounted(() => {
   },
 }" class="min-h-screen">
       <div class="  p-20 my-40">
-        <h2 class=" text-6xl lg:text-8xl font-semibold  leading-[7.5rem]  ">I 🖌️doodle🎨 my way across code creating fun
+        <h2 class=" text-6xl lg:text-8xl font-semibold  leading-[7.5rem]  text-[#e7e6c0] ">I 🖌️doodle🎨 my way across code creating fun
           and interactive
           experiences that inspire and connect with people through development and design.</h2>
       </div>
-    </section>
+    </div>
     <div ref="aboutSection" id="about">
       <About />
     </div>
-    <div ref="servicesSection" id="services">
+
+    <div ref="experienceSection" id="experience">
       <Experience />
     </div>
+
     <div ref="projectsSection" id="projects">
       <Projects />
     </div>
+
     <div ref="contactSection" id="contact">
       <Contact />
     </div>

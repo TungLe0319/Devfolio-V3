@@ -26,7 +26,7 @@
     duration: 1000,
     delay: 100,
   },
-}" class=" text-3xl text-[#8c8c73]   my-5 p-4">
+}" class=" text-3xl text-[#A1A55C]   mb-5 p-4">
           I am currently working a full-time job, but I am always open to new opportunities. If you have any questions, or
           just want to say hi, feel free to reach out to me.
         </h3>
@@ -61,7 +61,7 @@
               <v-textarea v-model="content" :rules="contentRule" clearable label="Your message"
                 color="orange-lighten-2"></v-textarea>
               <div class=" w-fit">
-                <v-btn type="submit" variant="outlined" block  class="mt-2 !text-[#8c8c73]  ">Send a
+                <v-btn type="submit" variant="outlined" block class="mt-2 !text-[#A1A55C]  ">Send a
                   message</v-btn>
               </div>
             </v-container>
@@ -79,15 +79,22 @@
     delay: 100,
   },
 }" class="w-1/3 flex flex-col   items-start">
-        <h3 class=" font-bold text-4xl mb-5">Contact & Socials</h3>
-     
         <div class="">
-      
-          <SocialIconList />
+          <h3 class=" font-bold text-4xl ">Contact & Socials</h3>
+          <hr class=" w-full my-3 border-[#A1A55C]">
         </div>
         <div class="">
-          <h3 class=" font-bold text-4xl my-5">Location</h3>
-          Idaho, United States
+          <SocialIconList />
+        </div>
+        <div class=" mt-5">
+          <h3 class=" font-bold text-4xl ">Location</h3>
+          <hr class=" w-full my-3 border-[#A1A55C]">
+          <p class="text-2xl">
+           Meridian, Idaho, United States
+          </p>
+          <div class="">
+            <MountainTime/>
+          </div>
         </div>
       </div>
     </div>

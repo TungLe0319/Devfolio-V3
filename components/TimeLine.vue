@@ -11,19 +11,20 @@
   },
 }" class=" w-full  ">
     <v-timeline align="start" side="end">
-      <v-timeline-item v-for="(item, i) in experience" :key="i" :dot-color="'#8c8c73'" elevation="4" >
+      <v-timeline-item v-for="(item, i) in experience" :key="i" :dot-color="'#8c8c73'" elevation="4">
         <template v-slot:opposite>
-          <div :class="`pt-1 headline font-weight-bold text-[#8c8c73]`" v-text="item.date"></div>
+          <div :class="`pt-1 headline font-weight-bold text-[#A1A55C]`" v-text="item.date"></div>
         </template>
         <v-card>
-          <v-card-title :class="['text-h6', 'bg-[#8c8c73]', 'text-white']">
+          <v-card-title :class="['text-h6', 'bg-[#A1A55C]', 'text-white']">
             {{ item.title }}
           </v-card-title>
           <v-card-text class="bg-white text--primary !p-4 ">
             <p class=" leading-loose"> {{ item.description }} </p>
           </v-card-text>
           <div class="flex flex-wrap  p-2 ">
-            <div v-for="t in item.tech" class=" text-sm  p-0.5 px-3 text-white rounded-md m-0.5 bg-[#8c8c73] hover:bg-black/80 transition-color duration-300 ">
+            <div v-for="t in item.tech"
+              class=" text-sm  p-0.5 px-3 text-white rounded-md m-0.5 bg-[#A1A55C] hover:bg-black/80 transition-color duration-300 ">
               {{ t }}
             </div>
           </div>
@@ -38,24 +39,7 @@ import Experience from '../data/Experience.json'
 const experience = ref(Experience)
 
 
-const items = [
-  {
-    color: 'red-lighten-2',
-    icon: 'mdi-star',
-  },
-  {
-    color: 'purple-lighten-2',
-    icon: 'mdi-book-variant',
-  },
-  {
-    color: 'green-lighten-1',
-    icon: 'mdi-airballoon',
-  },
-  {
-    color: 'indigo-lighten-2',
-    icon: 'mdi-layers-triple',
-  },
-]
+
 
 </script>
 

@@ -17,7 +17,6 @@
   background-color: #d1d1c7;
   color: #fff; /* Text color when highlighted */
 }
-
 .abril-fatface {
   font-family: "Abril Fatface", cursive;
 }
@@ -32,19 +31,9 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.text-shadow {
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.459);
+}
 
 h1,
 h2,

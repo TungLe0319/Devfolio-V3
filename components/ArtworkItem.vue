@@ -69,7 +69,7 @@ const startAnimation = () => {
 </script>
 
 <template>
-  <div ref="target" class="flex flex-col justify-start lg:min-h-[600px] xl:min-h-[900px] py-72 transition-all duration-300 ease-out relative  w-1/5 lg:w-full    ">
+  <div ref="target" class="flex flex-col justify-center     transition-all duration-300 ease-out relative   min-h-[75vh] w-full   ">
  
     <div :style="containerStyle" class=" w-full  flex items-center justify-center  ">
       <div v-motion :initial="{
@@ -82,7 +82,7 @@ const startAnimation = () => {
     duration: 300,
     delay: 100,
   },
-}" :style="cardStyle" class=" w-52 2xl:w-72 h-full ">
+}" :style="cardStyle" class=" w-52 2xl:w-72   ">
         <button @click="startAnimation" target="_blank" class="">
           <img :style="layer0" :src="src" alt="" class="   rounded-md
                object-cover shadow-none     " />

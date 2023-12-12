@@ -2,12 +2,17 @@
   <div class="cursor  flex items-center justify-center mix-blend-difference  " :class="appState.hoveringLink ? ' ' : ''"
     :style="{ left: `${position.x}px`, top: `${position.y}px`, width: `${appState.cursorWidth}px`, height: `${appState.cursorHeight}px` }">
     <!-- <Icon v-if="appState.hoveringLink" name="mynaui:external-link" class="text-5xl  drop-shadow-lg mix5-blend-difference" /> -->
-    <div v-if="appState.hoveringLink" class="w-3 h-3  bg-black  rounded-full"></div>
+   
   </div>
   <div v-if="!appState.hoveringLink" class="ringo text-3xl   "
     :class="appState.sectionIsDark ? 'brightness-200' : ' brightness-0'"
-    :style="{ left: `${position.x}px`, top: `${position.y}px` }"> <iframe height="75"
-      src="https://lottie.host/embed/10a300c5-5846-4bb0-a224-404c60cb753a/9Mi4IE9MGs.json"></iframe> </div>
+    :style="{ left: `${position.x}px`, top: `${position.y}px` }"> 
+    
+    
+    <!-- <iframe height="75"
+      src="https://lottie.host/embed/10a300c5-5846-4bb0-a224-404c60cb753a/9Mi4IE9MGs.json"></iframe> 
+     -->
+    </div>
 </template>
 
 <script setup lang="ts">

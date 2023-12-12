@@ -2,7 +2,7 @@
   <div class="min-h-screen flex items-center justify-center relative">
 
 
-    <!-- <p v-motion :initial="{
+    <p v-motion :initial="{
       y: 100,
       opacity: 0
     }" :enter="{
@@ -12,39 +12,26 @@
     duration: 1000,
     delay: 1500,
   },
-}" class="absolute lg:top-44 font-bold text-4xl noto-sans">Hello 👋🏼, My name is</p> -->
+}" class="absolute lg:top-44 font-bold text-4xl noto-sans">Hello 👋🏼, My name is</p>
 
     <div class="absolute w-full h-full flex flex-col items-center justify-center ">
    
 
 
 
-   <div class="">
-       <p v-motion :initial="{
-      y: 100,
-      opacity: 0
-    }" :enter="{
+      <h1 v-motion :initial="{
+        y: 100,
+        opacity: 0
+      }" :enter="{
   y: 0,
   opacity: 1,
   transition: {
     duration: 1000,
     delay: 1500,
   },
-}" class="absolute lg:top-32 font-bold text-4xl noto-sans">Hello 👋🏼, My name is</p>
-       <h1 v-motion :initial="{
-         y: 200,
-         opacity: 0
-       }" :enter="{
-  y: 0,
-  opacity: 1,
-  transition: {
-    duration: 1000,
-    delay: 2000,
-  },
 }" class="text-black text-[32rem] font-bold text-shadow3d">
-          Tung
-        </h1>
-   </div>
+        Tung
+      </h1>
     </div>
     <div class="absolute w-full h-full flex flex-col items-center justify-center">
 
@@ -56,9 +43,9 @@
   opacity: 1,
   transition: {
     duration: 1000,
-    delay: 2000,
+    delay: 1500,
   },
-}" class="text-background-clip text-[32rem] font-bold drop-shadow-lg ">
+}" class="text-background-clip text-[32rem] font-bold drop-shadow-lg">
          Tung
       </h1>
     </div>
@@ -70,7 +57,7 @@
   opacity: 1,
   transition: {
     duration: 1000,
-    delay: 2250,
+    delay: 1500,
   },
 }"  class="absolute bottom-0 right-4 flex flex-col items-center justify-center ">
      
@@ -113,11 +100,6 @@
                0 10px 10px rgba(0,0,0,.2),
                0 20px 20px rgba(0,0,0,.15);
 }
-
-
-
-
-
 
 
 

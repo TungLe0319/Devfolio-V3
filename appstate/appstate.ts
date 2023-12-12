@@ -6,7 +6,7 @@ export const appState = reactive({
   sectionIsDark: false,
   cursorWidth: 10,
   cursorHeight: 10,
-
+ activeSection :'',
   hoveringLink: false,
 });
 

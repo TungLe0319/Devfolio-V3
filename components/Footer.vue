@@ -77,8 +77,8 @@ const scrollToTop = () => {
             checkout my other devfolios:
           </div>
           <div class="flex space-x-4 justify-center">
-            <a href="https://www.huyng.xyz/" target="_blank">Version 2</a>
-            <a href="https://www.huyng.xyz/" target="_blank">Version 1</a>
+            <a href="https://tung.devfoliov2.devopportunities.dev/" target="_blank">Version 2</a>
+            <a href="https://tung.devopportunities.dev/#/" target="_blank">Version 1</a>
           </div>
         </div>
       </div>

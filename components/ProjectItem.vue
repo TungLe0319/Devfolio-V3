@@ -1,7 +1,7 @@
 <script setup >
 import { defineProps, ref, computed, reactive } from 'vue';
 import { useParallax } from '@vueuse/core';
-import { appState} from "../appstate/appstate";
+import { appState } from "../appstate/appstate";
 
 const target = ref(null);
 const parallax = reactive(useParallax(target));
@@ -16,7 +16,7 @@ const layerBase = {
 
 const layer0 = computed(() => ({
   ...layerBase,
-  transform: `translateX(${parallax.tilt * 10}px) translateY(${parallax.roll * 10}px) scale(1.33)`,
+  transform: `translateX(${parallax.tilt * 10}px) translateY(${parallax.roll * 10}px) `,
 }));
 
 const containerStyle = {
@@ -26,8 +26,8 @@ const containerStyle = {
 };
 
 const cardStyle = computed(() => ({
-  height: '12rem',
-  width: '20rem',
+  height: '14rem',
+  width: '25rem',
 
   transition: '.3s ease-out all',
   transform: `rotateX(${parallax.roll * 20}deg) rotateY(${parallax.tilt * 20}deg)`,
@@ -47,7 +47,7 @@ const props = defineProps({
 
 
 const showOverlay = ref(false);
-const link = 'https://example.com'; // Replace with your actual link
+
 
 
 
@@ -69,8 +69,8 @@ const startAnimation = () => {
 
   setTimeout(() => {
     showOverlay.value = false;
-    // window.location.href = link;
-  }, 3000);
+    window.open(props.link, '_blank')
+  }, 2500);
 };
 
 
@@ -82,7 +82,7 @@ const startAnimation = () => {
     <div
       class="backdrop-blur-xl bg-gray-950/40 rounded-md w-5/6 h-1/2 p-5 left-1/2  bottom-0   text-white noto-sans -translate-x-1/2 z-50 absolute transition-all duration-500 origin-center"
       :class="showingInfo ? 'scale-100' : 'scale-0'">
-      <p class="font-semibold underline mb-5">Project Description:</p>
+      <p class="font-semibold underline mb-3">Project Description:</p>
       {{ description }}
     </div>
     <div :style="containerStyle" class=" group flex  justify-center  w-full  ">
@@ -97,12 +97,12 @@ const startAnimation = () => {
     delay: 100,
   },
 }" :style="cardStyle">
-        <a :href="link"  @mouseenter="handleCursor" @mouseleave="resetCursor" target="_blank" class=" ">
-          <div class=" font-bold text-3xl  flex   mb-10   w-96 space-x-2  ">
-            <div class="text-[#8c8c73]  ">
+        <button @click="startAnimation" @mouseenter="handleCursor" @mouseleave="resetCursor" target="_blank" class=" ">
+          <div class=" font-bold text-3xl  flex  items-center  mb-3  w-96 space-x-2  ">
+            <div class="text-[#A1A55C]  ">
               0{{ index + 1 }}
             </div>
-            <h4 class=" text-[#8c8c73]   text-xl group-hover:text-teal-300 transition-colors duration-200 ">
+            <h4 class="  text-xl group-hover:text-teal-300 transition-colors duration-200 ">
               &lt; {{ title }}
               /> </h4>
             <div class="flex space-x-4">
@@ -121,6 +121,24 @@ const startAnimation = () => {
           </div>
           <img :style="layer0" :src="src" alt="" class="   rounded-md
                object-cover hover:shadow-2xl hover:shadow-gray-800  brightness-75     " />
+          <div v-motion :initial="{
+
+            width: 0,
+          }" :visibleOnce="{
+
+  width: 420,
+  transition: {
+    duration: 600
+  },
+}" v-if="showOverlay" class="absolute   flex items-center justify-center rounded   w-full h-full ">
+            <v-progress-circular :size="140" :width="14" indeterminate color="teal-lighten-3">
+              <template v-slot:default>
+                <div v-motion-pop :delay="700" class="rounded-full p-2 py-9 bg-black/80">
+                  Redirecting
+                </div>
+              </template>
+            </v-progress-circular>
+          </div>
           <div class="absolute     -bottom-[10rem] -left-0   text-white flex   w-full">
             <div v-for="t in tech">
               <!-- <img :src="t.src" alt="" class="w-10 my-2"> -->
@@ -131,7 +149,7 @@ const startAnimation = () => {
               </v-tooltip>
             </div>
           </div>
-        </a>
+        </button>
       </div>
     </div>
   </div>

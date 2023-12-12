@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref } from 'vue'
+import { appState } from '../appstate/appstate';
 
 const activeItem = ref<string | null>(null);
 const navTransform = ref('translateY(0)')
@@ -25,16 +26,22 @@ function handleScroll() {
 
   lastScrollPosition = scrollY;
 }
-const isActive = (href: string) => {
-  return activeItem.value === href;
+const isActive = (id: string) => {
+  return appState.activeSection === id;
 };
 
 
 const scrollToSection = (sectionId: string) => {
   const section = document.querySelector(sectionId);
+      appState.activeSection = sectionId
   if (section) {
     section.scrollIntoView({ behavior: 'smooth' });
+
+
+   
+
   }
+
 };
 
 function handleIndicator(el: HTMLElement) {
@@ -83,9 +90,6 @@ function setupIndicatorListeners() {
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll, { passive: true })
-  setTimeout(() => {
-    setupIndicatorListeners()
-  }, 2000)
 
 
 })
@@ -100,11 +104,11 @@ onBeforeUnmount(() => {
 
 
 const items = [
-  
-  { title: 'about', href: '#about', icon: 'mdi-book' },
-  { title: 'services', href: '#services', icon: 'mdi-food' },
-  { title: 'projects', href: '#projects', icon: 'mdi-food' },
-  { title: 'contact', href: '#contact', icon: 'mdi-food' },
+
+  { title: 'about', id: '#about', icon: 'mdi-book' },
+  { title: 'experience', id: '#experience', icon: 'mdi-food' },
+  { title: 'projects', id: '#projects', icon: 'mdi-food' },
+  { title: 'contact', id: '#contact', icon: 'mdi-food' },
 
 ]
 
@@ -124,7 +128,7 @@ const threshold = ref(100)
         </template>
         <v-list class="w-full bg-red-400" color="orange-lighten-4">
           <v-list-item v-for="(item, i) in items" :key="i" :value="item" color="primary">
-            <NuxtLink :to="item.href">
+            <NuxtLink :to="item.id">
               <div class="flex space-x-4 my-5">
                 <v-icon :icon="item.icon" size="x-large"></v-icon>
                 <v-list-item-title v-text="item.title" class="!text-5xl"></v-list-item-title>
@@ -139,7 +143,7 @@ const threshold = ref(100)
       <v-toolbar-title>
         <h3 class="font-bold">Tung</h3>
       </v-toolbar-title>
-      <Icon name="material-symbols-light:code-off-rounded" class="text-5xl  drop-shadow-lg" />
+   
     </div>
     <v-spacer></v-spacer>
     <!-- <ul  class="gap-4 relative hidden lg:flex">
@@ -153,8 +157,8 @@ const threshold = ref(100)
     <div>
       <ul class="gap-4 relative hidden lg:flex">
         <li v-motion-slide-right :delay="1000" v-for="(item, index) in items" :key="index">
-          <button @click="scrollToSection(item.href)" class="nav-item  !text-base "
-            :class="{ 'active text-orange-300 drop-shadow-sm': isActive(item.href) }">
+          <button @click="scrollToSection(item.id)" class="nav-item  cursor-none "
+            :class="{ 'active text-[#c5c591] drop-shadow-sm': isActive(item.id),  }">
             {{ item.title }}
           </button>
         </li>
@@ -174,7 +178,7 @@ const threshold = ref(100)
   bottom: 0;
 
   width: 0%;
-  height: 4px;
+  height: 2px;
   background-color: rgb(0, 0, 0);
 
   opacity: 0;
