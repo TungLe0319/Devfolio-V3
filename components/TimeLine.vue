@@ -19,14 +19,25 @@
           <v-card-title :class="['text-h6', 'bg-[#A1A55C]', 'text-white']">
             {{ item.title }}
           </v-card-title>
-          <v-card-text class="bg-white text--primary !p-4 ">
-            <p class=" leading-loose"> {{ item.description }} </p>
+          <v-card-text class="bg-white  !p-4 ">
+            <p class=" leading-loose text-lg"> {{ item.description }} </p>
           </v-card-text>
-          <div class="flex flex-wrap  p-2 ">
-            <div v-for="t in item.tech"
+          <div class="flex flex-wrap  p-2 gap-2 ">
+
+    <v-chip
+    v-for="tech in item.tech"
+        class="hover:bg-black/80 transition-color duration-300 hover:text-white"
+        label
+      >
+       {{ tech }}
+      </v-chip>
+
+
+
+            <!-- <div v-for="t in item.tech"
               class=" text-sm  p-0.5 px-3 text-white rounded-md m-0.5 bg-[#A1A55C] hover:bg-black/80 transition-color duration-300 ">
               {{ t }}
-            </div>
+            </div> -->
           </div>
         </v-card>
       </v-timeline-item>

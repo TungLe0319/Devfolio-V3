@@ -12,11 +12,11 @@
     duration: 1000,
     delay: 100,
   },
-}" class="lg:w-1/3 p-10  sticky top-24 h-full w-full">
+}" class="lg:w-1/3 p-10  sticky  top-10 h-full w-full">
         <h3 class="font-bold text-5xl mb-4">
           my experience.
         </h3>
-        <p class=" text-lg">
+        <p >
           These are where I've gained my recent experience of being in the tech world and software development.
         </p>
       </div>
@@ -36,10 +36,10 @@
     delay: 100,
   },
 }" class="lg:w-1/3 p-10  sticky top-24 h-full">
-        <h3 class="font-bold text-5xl mb-4">
+        <h3 class="mb-4">
           my digital tool box.
         </h3>
-        <p class=" text-lg">
+        <p >
           These are my go to tech stack to make any projects happen. I am always eager of learning more about my current
           stack, and new technologies that could expand my horizons.
         </p>
@@ -80,12 +80,11 @@
     delay: 100,
   },
 }" class="lg:w-1/3 p-10  ">
-          <h3 class="font-bold text-5xl mb-4">
+          <h3 class="mb-4">
             my current stack.
           </h3>
-          <p class=" text-lg">
-            This is  my go to tech stack to make most projects. I am always eager of learning more about my current
-            stack, and new technologies that could expand my horizons.
+          <p >
+            This is  my go to tech stack to make most projects. I love the custom
           </p>
         </div>
         <div class="lg:w-2/3 flex flex-wrap gap-2  my-10">

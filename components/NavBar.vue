@@ -141,7 +141,7 @@ const threshold = ref(100)
     <div class="flex space-x-4 items-center justify-center" v-motion-slide-left :delay="2000">
       <Icon name="ic:outline-barcode" class="text-5xl  drop-shadow-lg" />
       <v-toolbar-title>
-        <h3 class="font-bold">Tung</h3>
+        <p class="font-bold text-black">Tung Le</p>
       </v-toolbar-title>
    
     </div>

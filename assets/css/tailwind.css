@@ -44,6 +44,16 @@ h6 {
   font-family: "Roboto", sans-serif;
 }
 
+h3{
+  @apply text-5xl font-bold
+}
+
+p{
+  @apply text-2xl text-gray-500
+}
+
+
+
 html.lenis {
   height: auto;
 }

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bg-[#fafaf9]">
     <v-layout class="flex flex-col">
   
         <NavBar />

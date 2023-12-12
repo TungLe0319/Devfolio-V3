@@ -82,7 +82,7 @@ const startAnimation = () => {
     <div
       class="backdrop-blur-xl bg-gray-950/40 rounded-md w-5/6 h-1/2 p-5 left-1/2  bottom-0   text-white noto-sans -translate-x-1/2 z-50 absolute transition-all duration-500 origin-center"
       :class="showingInfo ? 'scale-100' : 'scale-0'">
-      <p class="font-semibold underline mb-3">Project Description:</p>
+      <p class="font-semibold underline mb-2 !text-white">Project Description:</p>
       {{ description }}
     </div>
     <div :style="containerStyle" class=" group flex  justify-center  w-full  ">
@@ -139,7 +139,7 @@ const startAnimation = () => {
               </template>
             </v-progress-circular>
           </div>
-          <div class="absolute     -bottom-[10rem] -left-0   text-white flex   w-full">
+          <div class="absolute     -bottom-[6.5rem] -left-0   text-white flex   w-full">
             <div v-for="t in tech">
               <!-- <img :src="t.src" alt="" class="w-10 my-2"> -->
               <v-tooltip :text="t.title">

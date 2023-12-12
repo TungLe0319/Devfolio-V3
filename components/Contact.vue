@@ -14,8 +14,8 @@
     duration: 1000,
     delay: 100,
   },
-}" class=" text-8xl font-bold p-3 ">Get in touch.</h2>
-        <h3 v-motion :initial="{
+}" class=" text-6xl font-bold p-3 ">Get in touch.</h2>
+        <p v-motion :initial="{
           opacity: 0,
           y: 100,
         }" :visible="{
@@ -26,10 +26,10 @@
     duration: 1000,
     delay: 100,
   },
-}" class=" text-3xl text-[#A1A55C]   mb-5 p-4">
+}" class=" text-2xl text-gray-500  mb-5 p-4">
           I am currently working a full-time job, but I am always open to new opportunities. If you have any questions, or
           just want to say hi, feel free to reach out to me.
-        </h3>
+        </p>
         <div v-motion :initial="{
           opacity: 0,
           y: 100,
@@ -80,16 +80,16 @@
   },
 }" class="w-1/3 flex flex-col   items-start">
         <div class="">
-          <h3 class=" font-bold text-4xl ">Contact & Socials</h3>
+          <h3 class=" font-bold text-3xl ">Contact & Socials</h3>
           <hr class=" w-full my-3 border-[#A1A55C]">
         </div>
         <div class="">
           <SocialIconList />
         </div>
-        <div class=" mt-5">
-          <h3 class=" font-bold text-4xl ">Location</h3>
+        <div class=" mt-8">
+          <h3 class=" font-bold text-3xl ">Location</h3>
           <hr class=" w-full my-3 border-[#A1A55C]">
-          <p class="text-2xl">
+          <p class="text-xl">
            Meridian, Idaho, United States
           </p>
           <div class="">

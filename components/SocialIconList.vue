@@ -2,8 +2,8 @@
   <ul class="col-span-2 flex flex-col justify-start gap-6 lg:col-span-5 lg:justify-end">
     <li v-for="item in items" class="">
       <a @mouseenter="handleCursor" @mouseleave="resetCursor" :href="item.link" class="flex items-center  space-x-4">
-        <Icon :name="item.icon" class="text-3xl text-gray-600   transition-all duration-200" />
-        <h6 class="font-medium text-gray-600"> {{ item.name }} </h6>
+        <Icon :name="item.icon" class="text-2xl text-gray-600   transition-all duration-200" />
+        <p class="font-medium text-gray-600 text-xl"> {{ item.name }} </p>
       </a>
     </li>
   </ul>

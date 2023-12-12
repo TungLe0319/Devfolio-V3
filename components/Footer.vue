@@ -7,7 +7,7 @@ const scrollToTop = () => {
 };
 </script>
 <template>
-  <div class="w-full  flex items-center justify-center  bg-[#fafaf9] text-[#262626]">
+  <div class="w-full  flex items-center justify-center   text-[#262626]">
     <div class="md:w-2/3 w-full px-4  flex flex-col">
       <div class="w-full text-7xl font-bold font-serif">
         <h1 v-motion :initial="{
@@ -48,12 +48,12 @@ const scrollToTop = () => {
     duration: 1000,
     delay: 100,
   },
-}">
+}" class="my-3">
           This portfolio was heavily inspired by
-          <a href="https://www.huyng.xyz/" target="_blank">Huy Nguyen.</a>
+          <a @mouseenter="handleCursor" @mouseleave="resetCursor"  href="https://www.huyng.xyz/" target="_blank">Huy Nguyen.</a>
         </div>
         <div v-motion-slide-visible-right :delay="200" class=" pt-6 md:pt-0 space-x-4 flex items-center  ">
-          <v-btn @click="scrollToTop" class="orange-lighten-3" icon=" mdi-arrow-up" size="large"></v-btn>
+          <v-btn @mouseenter="handleCursor" @mouseleave="resetCursor"  @click="scrollToTop" class="orange-lighten-3" icon=" mdi-arrow-up" size="large"></v-btn>
           <p>Back to the top</p>
         </div>
       </div>
@@ -71,14 +71,14 @@ const scrollToTop = () => {
   },
 }" class="w-full text-center my-12 text-gray-600">© 2023 Tung Le
           <div class="">
-            <p>Site developed and designed with ❤️(∩ ⌣̀_⌣́)🔥</p>
+            <p class="text-base">Site developed and designed with ❤️(∩ ⌣̀_⌣́)🔥</p>
           </div>
           <div class="">
-            checkout my other devfolios:
+            check out my other devfolios:
           </div>
-          <div class="flex space-x-4 justify-center">
-            <a href="https://tung.devfoliov2.devopportunities.dev/" target="_blank">Version 2</a>
-            <a href="https://tung.devopportunities.dev/#/" target="_blank">Version 1</a>
+          <div class="flex space-x-4 justify-center text-bold ">
+            <a @mouseenter="handleCursor" @mouseleave="resetCursor"  href="https://tung.devopportunities.dev/#/" target="_blank">Version 1</a>
+            <a @mouseenter="handleCursor" @mouseleave="resetCursor"  href="https://tung.devfoliov2.devopportunities.dev/" target="_blank">Version 2</a>
           </div>
         </div>
       </div>
@@ -88,7 +88,35 @@ const scrollToTop = () => {
 
 
 <style lang="css" scoped>
-a {
-  @apply hover:-translate-y-1 transition-all duration-200
+a{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition: 0.5s;
 }
+
+a:before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+
+  width: 0%;
+  height: 4px;
+  background-color: rgb(0, 0, 0);
+
+  opacity: 0;
+  transition: 0.5s;
+}
+
+
+
+a:hover:before {
+  width: 100%;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+
 </style>
