@@ -61,7 +61,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="flex flex-col  transition-colors duration-1000   "
+  <div class="flex flex-col   transition-colors duration-1000   "
     :class="appState.sectionIsDark ? 'bg-zinc-900 text-[#d1cdc7]' : ' bg-[#fafaf9] text-zinc-800'">
     <div ref="heroSection">
       <HeroVersionTwo />

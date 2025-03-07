@@ -24,7 +24,7 @@
         <TimeLine />
       </div>
     </section>
-    <section class="flex my-20 ">
+    <section class="flex  my-44 ">
       <div v-motion :initial="{
         opacity: 0,
         y: 100,
@@ -35,7 +35,7 @@
     duration: 1000,
     delay: 100,
   },
-}" class="lg:w-1/3 p-10  sticky top-24 h-full">
+}" class="lg:w-1/3 p-10  my-4  sticky top-24 h-full">
         <h3 class="mb-4">
           my digital tool box.
         </h3>
@@ -68,7 +68,7 @@
 
 
 
-    <section class="flex ">
+    <!-- <section class="flex ">
         <div v-motion :initial="{
           opacity: 0,
           y: 100,
@@ -106,7 +106,7 @@
             </v-tooltip>
           </div>
         </div>
-      </section>
+      </section> -->
 
   </div>
 </template>

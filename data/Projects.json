@@ -1,7 +1,7 @@
 [
   {
     "title": "UIUX-Construction",
-    "src": "https://cdn.discordapp.com/attachments/1060066788878069891/1181104026247499776/image.png?ex=657fd7d7&is=656d62d7&hm=ad475e7c6c65aa261abb3cfb209bb69d681f313f07d569cb4010318d5dd2779e&",
+    "src": "https://cdn.discordapp.com/attachments/1347634400732385380/1347635918328303647/image.png?ex=67cc8b40&is=67cb39c0&hm=67a8487f8be23df4e4de812fca82dff89eb860be2a7939ceae3f692ef79cf41e&",
     "description": "A part of my  comprehensive developer portfolio series, meticulously crafted with Nuxt, Vue,Tailwind and Vuetify. This collection showcases my proficiency in creating dynamic and visually appealing UI/UX landing pages.",
     "tech": [
       {
@@ -25,11 +25,11 @@
         "src": "logos:vuetifyjs"
       }
     ],
-    "link": "https://tung.uiux.contruction.devopportunities.dev/"
+    "link": "https://uiuxconstruction.devopportunities.dev/"
   },
   {
-    "title": "UIUX-Cafe",
-    "src": "https://cdn.discordapp.com/attachments/1060066788878069891/1180946260153335818/image.png?ex=657f44e9&is=656ccfe9&hm=2d4aff6b129a22b82c5e3308e7df460335eadff97ed0d6b59d80ea571e35b729&",
+    "title": "UIUX-Cafe1",
+    "src": "https://cdn.discordapp.com/attachments/1347634400732385380/1347634419367809134/image.png?ex=67cc89db&is=67cb385b&hm=a781c9ac805d17268b8858e4664b5dfdd1cb28757e2651e35072572c503b659e&",
     "description": "A part of my  comprehensive developer portfolio series, meticulously crafted with Nuxt, Vue,Tailwind and Vuetify. This collection showcases my proficiency in creating dynamic and visually appealing UI/UX landing pages.",
     "tech": [
       {
@@ -49,11 +49,35 @@
         "src": "logos:vuetifyjs"
       }
     ],
-    "link": "https://tung.uiux.cafe-2.devopportunities.dev/"
+    "link": "https://uiuxcafe1.devopportunities.dev/"
+  },
+  {
+    "title": "UIUX-Cafe2",
+    "src": "https://cdn.discordapp.com/attachments/1347634400732385380/1347635182655639653/image.png?ex=67cc8a91&is=67cb3911&hm=bb1def0bef9f3a34d2f1db0e3e1ac6e82ae4325526845502ac3c515a740a95a0&",
+    "description": "A part of my  comprehensive developer portfolio series, meticulously crafted with Nuxt, Vue,Tailwind and Vuetify. This collection showcases my proficiency in creating dynamic and visually appealing UI/UX landing pages.",
+    "tech": [
+      {
+        "title": "Nuxt.js",
+        "src": "skill-icons:nuxtjs-dark"
+      },
+      {
+        "title": "Vue.js 3",
+        "src": "skill-icons:vuejs-light"
+      },
+      {
+        "title": "TailWind CSS",
+        "src": "skill-icons:tailwindcss-dark"
+      },
+      {
+        "title": "Vuetify",
+        "src": "logos:vuetifyjs"
+      }
+    ],
+    "link": "https://uiuxcafe2.apps.devopportunities.dev/"
   },
   {
     "title": "UIUX-Hvac",
-    "src": "https://media.discordapp.net/attachments/1060066788878069891/1179920738472443967/image.png?ex=657b89d1&is=656914d1&hm=f3ae349883216f47f2cc3ecd94163939d884110a58607aff89f7fbe97b0ed165&=&format=webp&width=960&height=533",
+    "src": "https://cdn.discordapp.com/attachments/1347634400732385380/1347637325504581643/image.png?ex=67cc8c90&is=67cb3b10&hm=8a77e70c433741c7570b21bdc53946289859440ed1dec8f54432f853a09a645a&",
     "description": "A part of my  comprehensive developer portfolio series, meticulously crafted with Nuxt, Vue, and Tailwind. This collection showcases my proficiency in creating dynamic and visually appealing UI/UX landing pages.This one particular focused on HVAC services.",
     "tech": [
       {
@@ -69,7 +93,7 @@
         "src": "skill-icons:tailwindcss-dark"
       }
     ],
-    "link": "https://frontier.devopportunities.dev/"
+    "link": "https://uiuxhvac.devopportunities.dev/"
   },
   {
     "title": "UIUX-Digital-2",
@@ -93,7 +117,7 @@
   },
   {
     "title": "UIUX-Digital-1",
-    "src": "https://media.discordapp.net/attachments/1060066788878069891/1179921120556757092/image.png?ex=657b8a2d&is=6569152d&hm=c7ae472bcb30e33b7c7faed738922aa0cfc1b45e48d24b65618fba9f37329765&=&format=webp&width=960&height=533",
+    "src": "https://cdn.discordapp.com/attachments/1347634400732385380/1347635670989934602/image.png?ex=67cc8b05&is=67cb3985&hm=beaa510b4fd27c02d8857158e5f9a992f93d721193f8873ae5e0ff6b5584e3bd&",
     "description": "A part of my  comprehensive developer portfolio series, meticulously crafted with Nuxt, Vue, and Tailwind. This collection showcases my proficiency in creating dynamic and visually appealing UI/UX landing pages.",
     "tech": [
       {
@@ -109,7 +133,7 @@
         "src": "skill-icons:tailwindcss-dark"
       }
     ],
-    "link": "https://tung.uiux.digital-1.devopportunities.dev/"
+    "link": "https://uiuixdigital1.apps.devopportunities.dev/"
   },
   {
     "title": "Nuxt Drizzle",
@@ -170,7 +194,7 @@
   },
   {
     "title": "Svelte Blog",
-    "src": "https://media.discordapp.net/attachments/1060066788878069891/1165068659912355990/image.png?ex=654581be&is=65330cbe&hm=430d46aed7750e097cf44cc1d98cf76596700d00cbe0e72e64a4f70784cef630&=&width=720&height=368",
+    "src": "https://cdn.discordapp.com/attachments/1347634400732385380/1347639319510388787/image.png?ex=67cc8e6b&is=67cb3ceb&hm=22d4d6e8959f76ac1b662cdcf3f2188d244283ab146634dc38f6fcfa137e718a&",
     "description": "Blog app with an authentication flow, PostgreSQL database, ORM, and Tailwind-styled components. Includes search functionality, likes, comments, dynamic routing, and post details. Developed with SvelteKit. ",
     "tech": [
       {
@@ -195,7 +219,7 @@
         "src": "skill-icons:postgresql-dark"
       }
     ],
-    "link": "https://svelte-blog.tung.devopportunities.dev/"
+    "link": "https://svelteblog.devopportunities.dev/"
   },
   {
     "title": "The Daily Sun",
@@ -256,31 +280,7 @@
     "link": "https://nextcord.apps.devopportunities.dev/"
   },
 
-  {
-    "title": "SamadhiYogaIdaho",
-    "src": "https://media.discordapp.net/attachments/1060066788878069891/1060067418073993226/samadhiApp.png?width=720&height=399",
-    "description": "Full-Stack app and landing page custom made for a yoga business owner and friend to showcase her class teaching schedules and upcoming events.",
-    "tech": [
-      {
-        "title": "Vue.js 3",
-        "src": "skill-icons:vuejs-light"
-      },
-      {
-        "title": "BootStrap",
-        "src": "skill-icons:bootstrap"
-      },
-      {
-        "title": "MongoDb",
-        "src": "skill-icons:mongodb"
-      },
-      {
-        "title": "PocketBase",
-        "src": "logos:pocket-base"
-      }
-    ],
 
-    "link": "https://www.samadhiyogaidaho.com/#/"
-  },
 
   {
     "title": "NextFire",
